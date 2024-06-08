@@ -1,0 +1,19 @@
+<TextStyle>
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        Label:
+            markup: True
+            text: "This is [color=#ff0000][b]Bold[/b][/color] text."
+            font_size: 32
+
+        Label:
+            markup: True
+            text: "This is [font=FreeMono][size=50][i]Italic[/i][/size][/font] text."
+            font_size: 32
+
+        Button:
+            text: "Show Progress"
+            on_press: root.progress()
