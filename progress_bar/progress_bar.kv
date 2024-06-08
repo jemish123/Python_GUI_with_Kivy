@@ -1,0 +1,22 @@
+<ProgressBarWidget>
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        Label:
+            id: progress_label
+            text: "Progress: 0%"
+            font_size: 32
+
+        ProgressBar:
+            id: my_progress_bar
+            min: 0
+            max: 100
+            value: 0
+            pos_hint: {'x': .1}
+            size_hint_x: .8
+
+        Button:
+            text: "Show Progress"
+            on_press: root.progress()

@@ -1,0 +1,17 @@
+<SliderWidget>
+    slide_text: slider_label
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        Label:
+            id: slider_label
+            text: "Slide the Slider"
+            font_size: 32
+
+        Slider:
+            min: 0
+            max: 100
+            step: 2
+            orientation: "vertical"
+            on_value: root.slide_it(*args)

@@ -1,0 +1,53 @@
+<TextInput>
+    background_color: (229/255, 239/255, 239/255, 1)
+
+<Label>
+    font_size: 45
+    background_color: (39/255, 74/255, 74/255, 1)
+    canvas.before:
+        Color:
+            rgba: self.background_color
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    # Text Formation
+    bold: True
+    italic: True
+    outline_color: (0,0,0,1)
+    outline_width: 2
+
+<Button>
+    font_size: 32
+    size_hint: (None, None)
+    width: 150
+    height: 60
+    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+    background_normal: ""
+    background_color: (0.5, 0.5, 1, 0.3)
+    bold: False
+    italic: False
+
+<MyLayout>
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        padding: 10
+        spacing: 10
+
+        Label:
+            text: "Name"
+        TextInput:
+            multiline: False
+
+        Label:
+            text: "Password"
+        TextInput:
+            multiline: False
+
+        Button:
+            text: "Submit"
+            #font_size: 35
+        Button:
+            text: "Clear"
+            background_color: (46/255, 135/255, 135/255, 1)

@@ -1,0 +1,19 @@
+<DropdownWidget>
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        Label:
+            id: click_label
+            text: "Your Subject: "
+            font_size: 32
+
+        Spinner:
+            id: spinner_id
+            text: "Choose Your Subject"
+            size_hint: (1, .2)
+            pos_hint: {"y": 0.5, "bottom": 0.5}
+            values: ['Mathematics', 'Physics', 'Chemistry', 'English', 'Spanish Lang']
+
+            on_text: root.spinner_clicked(spinner_id.text)
+
